@@ -1,0 +1,43 @@
+{
+  "name": "动漫之家v3",
+  "source": "http://v3api.dmzj.com",
+  "summary": "动漫之家 v3 版本 Api.",
+  "sort": 2,
+  "version": 100,
+  "charset": "utf-8",
+  "search": {
+    "link": "http://v3api.dmzj.com/search/show/1/${key}/0.json",
+    "type": "json",
+    "list": "$.*",
+    "item": {
+      "name": "$.title",
+      "author": "$.authors",
+      "cover": "$.cover",
+      "summary": "",
+      "sort": "$.types",
+      "metadata": "$.id@js->'https://v3api.dmzj.com/novel/${this}.json'"
+    }
+  },
+  "metadata": {
+    "type": "json",
+    "author": "",
+    "cover": "",
+    "summary": "$.introduction",
+    "sort": "",
+    "update": "$.last_update_time",
+    "status": "$.status",
+    "catalog": "$.id@js->'http://v3api.dmzj.com/novel/chapter/${this}.json'"
+  },
+  "catalog": {
+    "type": "json",
+    "list": "$.*",
+    "name": "$.volume_name",
+    "next": "$.chapters",
+    "chapter": {
+      "name": "$.chapter_name",
+      "link": "$.chapter_id@js->'http://v3api.dmzj.com/novel/download/999999_${super.id}_${this}.txt'",
+      "type": "xml",
+      "content": "#TextContent"
+    }
+  }
+}

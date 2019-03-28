@@ -1,0 +1,67 @@
+{
+  "name": "刺猬猫",
+  "version": 108,
+  "category": 1,
+  "url": "https://www.ciweimao.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["div.cnt > p.tit"],
+    "author": ["div.cnt > p:nth-child(2) > a"],
+    "cover": ["a.cover > img@attr->src", "div.cover > img@attr->src"],
+    "summary": ["div.desc"],
+    "category": [
+      "div.book-property > span:nth-child(5)@js->${this}.replace(/小说类别：/g,'')"
+    ],
+    "update": [
+      "div.cnt > p:nth-child(3)@js->${this}.replace(/.+?：|\\/.+/g,'')"
+    ],
+    "link": ["div.cnt > p.tit > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "ul.book-chapter-list > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href@js->${this}.replace('https://www.ciweimao.com/chapter/','http://119.28.5.152:9010/book?id=')"
+    }
+  },
+  "content": {
+    "text": "$.content"
+  },
+  "search": {
+    "link": "https://www.ciweimao.com/get-search-book-list/${key}/1",
+    "list": "div.rank-book-list > ul > li"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "月票榜",
+        "link": "https://www.qidian.com/rank/yuepiao?page="
+      },
+      {
+        "name": "热销榜",
+        "link": "https://www.qidian.com/rank/hotsales?page="
+      },
+      {
+        "name": "点击榜",
+        "link": "https://www.qidian.com/rank/newvipclick?page="
+      },
+      {
+        "name": "推荐榜",
+        "link": "https://www.qidian.com/rank/recom?page="
+      },
+      {
+        "name": "新书榜",
+        "link": "https://www.qidian.com/rank/signnewbook?page="
+      }
+    ],
+    "list": "div.book-img-text > ul > li",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "",
+      "next": "${index}"
+    }
+  }
+}

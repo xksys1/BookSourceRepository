@@ -1,0 +1,54 @@
+{
+  "name": "GITHUB",
+  "summary": "Provided links and based on github.com",
+  "list": [
+    {
+      "name": "My716",
+      "url": "http://api.zhuishushenqi.com",
+      "category": 1,
+      "rank": 4,
+      "auth": false,
+      "version": 104
+    },
+    {
+      "name": "稻草人书屋",
+      "url": "https://www.daocaorenshuwu.com",
+      "category": 3,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "笔趣阁",
+      "url": "https://www.biqubao.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "动漫之家",
+      "url": "http://v3api.dmzj.com",
+      "category": 2,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "亲小说",
+      "url": "https://www.qinxiaoshuo.com",
+      "category": 2,
+      "rank": 6,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "轻之文库",
+      "url": "https://www.linovel.net",
+      "category": 2,
+      "rank": 24,
+      "auth": false,
+      "version": 100
+    }
+  ]
+}

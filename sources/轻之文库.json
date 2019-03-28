@@ -1,0 +1,143 @@
+{
+  "name": "轻之文库",
+  "version": 100,
+  "category": 2,
+  "url": "https://www.linovel.net",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h3.title", "a > div > p"],
+    "author": ["a.author", "span.author"],
+    "cover": ["a > img@attr->src"],
+    "summary": ["p.intro@js->${this}.substring(4)"],
+    "category": ["div.book-cats"],
+    "update": ["small.chapter-update-time"],
+    "link": ["a@attr->href@js->'https://www.linovel.net' + ${this}"],
+    "catalog": ["div.primary > a@attr->href@js->'https://www.linovel.net' + ${this}.substring(0, ${this}.lastIndexOf('/')) + '.html#catalog'"]
+  },
+  "catalog": {
+    "list": "div.section-list > div",
+    "orderBy": 0,
+    "booklet": {
+      "name": "h2.volume-title",
+      "list": "div.chapter"
+    },
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href@js->'https://www.linovel.net' + ${this}"
+    }
+  },
+  "content": {
+    "text": "div.article-text"
+  },
+  "search": {
+    "link": "https://www.linovel.net/search/?kw=${key}",
+    "list": "ul.list > li"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "文库精选",
+        "link": "https://www.linovel.net/cat/2000.html"
+      },
+      {
+        "name": "新人赏",
+        "link": "https://www.linovel.net/cat/9100.html"
+      },
+      {
+        "name": "幻想",
+        "link": "https://www.linovel.net/cat/1.html"
+      },
+      {
+        "name": "战斗",
+        "link": "https://www.linovel.net/cat/2.html"
+      },
+      {
+        "name": "恋爱",
+        "link": "https://www.linovel.net/cat/3.html"
+      },
+      {
+        "name": "异界",
+        "link": "https://www.linovel.net/cat/4.html"
+      },
+      {
+        "name": "搞笑",
+        "link": "https://www.linovel.net/cat/5.html"
+      },
+      {
+        "name": "日常",
+        "link": "https://www.linovel.net/cat/6.html"
+      },
+      {
+        "name": "校园",
+        "link": "https://www.linovel.net/cat/7.html"
+      },
+      {
+        "name": "后宫",
+        "link": "https://www.linovel.net/cat/8.html"
+      },
+      {
+        "name": "科幻",
+        "link": "https://www.linovel.net/cat/10.html"
+      },
+      {
+        "name": "治愈",
+        "link": "https://www.linovel.net/cat/11.html"
+      },
+      {
+        "name": "超能力",
+        "link": "https://www.linovel.net/cat/12.html"
+      },
+      {
+        "name": "节操",
+        "link": "https://www.linovel.net/cat/13.html"
+      },
+      {
+        "name": "妖怪",
+        "link": "https://www.linovel.net/cat/14.html"
+      },
+      {
+        "name": "恐怖",
+        "link": "https://www.linovel.net/cat/15.html"
+      },
+      {
+        "name": "妹控",
+        "link": "https://www.linovel.net/cat/16.html"
+      },
+      {
+        "name": "伪娘",
+        "link": "https://www.linovel.net/cat/17.html"
+      },
+      {
+        "name": "魔法少女",
+        "link": "https://www.linovel.net/cat/18.html"
+      },
+      {
+        "name": "乙女",
+        "link": "https://www.linovel.net/cat/19.html"
+      },
+      {
+        "name": "同人",
+        "link": "https://www.linovel.net/cat/20.html"
+      },
+      {
+        "name": "百合",
+        "link": "https://www.linovel.net/cat/21.html"
+      },
+      {
+        "name": "偶像",
+        "link": "https://www.linovel.net/cat/22.html"
+      },
+      {
+        "name": "悬疑",
+        "link": "https://www.linovel.net/cat/104.html"
+      }
+    ],
+    "list": "a.thumbnail",
+    "page": {
+      "index": 1,
+      "limit": 18,
+      "begin": "",
+      "next": "?page=${index}"
+    }
+  }
+}

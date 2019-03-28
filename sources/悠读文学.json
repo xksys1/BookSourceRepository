@@ -1,0 +1,99 @@
+{
+  "name": "悠读文学",
+  "source": "https://www.yooread.net",
+  "summary": "享受精品阅读时光",
+  "sort": 1,
+  "version": 100,
+  "charset": "utf-8",
+  "search": {
+    "link": "https://www.yooread.net/e/search/index.php@post->keyboard=${key}&show=title&tempid=1",
+    "type": "xml",
+    "list": "div.sort-con-wp > a",
+    "item": {
+      "name": "div.sort-con-detail > h3",
+      "author": "",
+      "cover": "div.sort-con-img > img@xml->src@js->'https://www.yooread.net${this}'",
+      "summary": "div.sort-con-detail > p",
+      "sort": "",
+      "metadata": "@xml->href@js->'https://www.yooread.net${this}'"
+    }
+  },
+  "metadata": {
+    "type": "xml",
+    "author": "li.wr > a",
+    "cover": "",
+    "summary": "",
+    "sort": "",
+    "update": "li.uptime@js->'${this}'.match('更新：(.*)')[1]",
+    "status": "div.txt > ul > li:nth-child(4)",
+    "catalog": ""
+  },
+  "catalog": {
+    "type": "xml",
+    "list": "table > tbody > tr > td > ul > li@sort->a@xml->href",
+    "name": "",
+    "next": "",
+    "chapter": {
+      "name": "a@xml->title",
+      "link": "a@xml->href@js->'https://www.yooread.net${this}'",
+      "type": "xml",
+      "content": "#TextContent > p"
+    }
+  },
+  "rank": {
+    "links": [
+      {
+        "name": "人气新书",
+        "link": "https://www.yooread.net/22/"
+      },
+      {
+        "name": "科幻奇幻",
+        "link": "https://www.yooread.net/4/"
+      },
+      {
+        "name": "都市言情",
+        "link": "https://www.yooread.net/2/"
+      },
+      {
+        "name": "侦探推理",
+        "link": "https://www.yooread.net/3/"
+      },
+      {
+        "name": "东方玄幻",
+        "link": "https://www.yooread.net/19/"
+      },
+      {
+        "name": "武侠仙侠",
+        "link": "https://www.yooread.net/1/"
+      },
+      {
+        "name": "历史军事",
+        "link": "https://www.yooread.net/5/"
+      },
+      {
+        "name": "穿越架空",
+        "link": "https://www.yooread.net/16/"
+      },
+      {
+        "name": "游戏竞技",
+        "link": "https://www.yooread.net/20/"
+      }
+    ],
+    "type": "xml",
+    "page": {
+      "index": 1,
+      "limit": 30,
+      "start": "",
+      "next": "index_${index}.html"
+    },
+    "list": "div.book_list > ul > li",
+    "item": {
+      "name": "div.txt > h2 > a",
+      "author": "div.txt > p > a",
+      "cover": "div.img > a > img@xml->_src@js->'https://www.yooread.net${this}'",
+      "summary": "div.txt > p.con",
+      "sort": "div.txt > h2 > span",
+      "metadata": "div.img > a@xml->href@js->'https://www.yooread.net${this}'"
+    }
+  }
+}

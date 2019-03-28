@@ -1,0 +1,53 @@
+{
+  "name": "My716",
+  "version": 104,
+  "category": 1,
+  "url": "http://api.zhuishushenqi.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover@js->'http://statics.zhuishushenqi.com' + ${this}"],
+    "summary": ["$.shortIntro"],
+    "category": ["$.cat", "$.majorCate"],
+    "update": ["$.[?(@.source=='my176')].updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"],
+    "link": ["$._id@js->'http://api.zhuishushenqi.com/atoc?view=summary&book=' + ${this}"],
+    "catalog": ["$.[?(@.source=='my176')]._id@js->'http://api.zhuishushenqi.com/atoc/' + ${this} + '?view=chapters'"]
+  },
+  "catalog": {
+    "list": "$.chapters",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapterup.zhuishushenqi.com/chapter/' + encodeURIComponent(${this})"
+    }
+  },
+  "content": {
+    "text": "$.*.body"
+  },
+  "search": {
+    "link": "http://api.zhuishushenqi.com/book/fuzzy-search?query=${key}",
+    "list": "$.books[?(@.contentType =='txt')]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "最热榜",
+        "link": "http://api.zhuishushenqi.com/ranking/54d42d92321052167dfb75e3"
+      },
+      {
+        "name": "好评榜",
+        "link": "http://api.zhuishushenqi.com/ranking/5a6844aafc84c2b8efaa6b6e"
+      },
+      {
+        "name": "热搜榜",
+        "link": "http://api.zhuishushenqi.com/ranking/5a6844f8fc84c2b8efaa8bc5"
+      },
+      {
+        "name": "完结榜",
+        "link": "http://api.zhuishushenqi.com/ranking/564eb878efe5b8e745508fde"
+      }
+    ],
+    "list": "$.ranking.books"
+  }
+}

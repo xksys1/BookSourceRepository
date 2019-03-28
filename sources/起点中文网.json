@@ -1,0 +1,93 @@
+{
+  "name": "起点中文网",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.qidian.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["div.book-mid-info > h4 > a"],
+    "author": [
+      "div.book-mid-info > p.author > a[data-eid=qd_S06]",
+      "p.author > a.name"
+    ],
+    "cover": [
+      "div.book-img-box > a > img@attr->src@js->'https:' + ${this}",
+      "a#bookImg > img@attr->src@js->'https:' + ${this}.replace(/180$/g,'')"
+    ],
+    "summary": ["p.intro", "div.book-mid-info > p.intro"],
+    "category": [
+      "div.book-mid-info > p.author > a[data-eid=qd_S07]",
+      "p.author > span"
+    ],
+    "update": ["em.time"],
+    "link": [
+      "div.book-img-box > a[data-eid=qd_S04]@attr->href@js->'https:' + ${this}",
+      "div.book-mid-info > h4 > a@attr->href@js->'https:' + ${this}"
+    ],
+    "catalog": [
+      "#addBookBtn@attr->data-bid@js->'https://book.qidian.com/ajax/book/category?_csrfToken=deepink&bookId=' + ${this}"
+    ],
+    "extra": [
+      {
+        "key": "bookID",
+        "value": "#addBookBtn@attr->data-bid"
+      }
+    ]
+  },
+  "catalog": {
+    "list": "$.data.vs",
+    "orderBy": 0,
+    "booklet": {
+      "name": "$.vN",
+      "list": "$.cs"
+    },
+    "chapter": {
+      "name": "$.cN",
+      "link": "$.id@js->'https://m.qidian.com/book/'+ ${extra.bookID} + '/' + ${this}"
+    }
+  },
+  "content": {
+    "text": "section.jsChapterWrapper > p"
+  },
+  "search": {
+    "link": "https://www.qidian.com/search?kw=${key}",
+    "list": "li.res-book-item"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "月票榜",
+        "link": "https://www.qidian.com/rank/yuepiao?page="
+      },
+      {
+        "name": "热销榜",
+        "link": "https://www.qidian.com/rank/hotsales?page="
+      },
+      {
+        "name": "点击榜",
+        "link": "https://www.qidian.com/rank/newvipclick?page="
+      },
+      {
+        "name": "推荐榜",
+        "link": "https://www.qidian.com/rank/recom?page="
+      },
+      {
+        "name": "新书榜",
+        "link": "https://www.qidian.com/rank/signnewbook?page="
+      }
+    ],
+    "list": "div.book-img-text > ul > li",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "",
+      "next": "${index}"
+    }
+  },
+  "auth": {
+    "login": "https://passport.yuewen.com",
+    "cookie": "https://ptlogin.qidian.com",
+    "valid": "a.read-btn-vip-login",
+    "order": "div.read-rss-auto"
+  }
+}

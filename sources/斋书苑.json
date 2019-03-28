@@ -1,0 +1,43 @@
+{
+  "name": "斋书苑",
+  "source": "https://www.zhaishuyuan.com",
+  "summary": "小说荟萃的地方",
+  "sort": 1,
+  "version": 100,
+  "charset": "gb2312",
+  "search": {
+    "link": "https://www.zhaishuyuan.com/search/@post->s=${key}",
+    "type": "xml",
+    "list": "#sitembox > dl",
+    "item": {
+      "name": "dd > h3 > a",
+      "author": "dd.book_other > span",
+      "cover": "dt > a > img@xml->_src@js->'https:${this}'",
+      "summary": "dd.book_des",
+      "sort": "dd.book_other > span:nth-child(3)",
+      "metadata": "dt > a@xml->href@js->'https://www.zhaishuyuan.com${this}'"
+    }
+  },
+  "metadata": {
+    "type": "xml",
+    "author": "",
+    "cover": "",
+    "summary": "",
+    "sort": "",
+    "update": "div.new > span.uptime > span",
+    "status": "div.count > ul > li:nth-child(2) > span",
+    "catalog": "div.motion > a@xml->href@js->'https://www.zhaishuyuan.com${this}'"
+  },
+  "catalog": {
+    "type": "xml",
+    "list": "#readerlists > ul > li",
+    "name": "",
+    "next": "",
+    "chapter": {
+      "name": "a",
+      "link": "a@xml->href@js->'https://www.zhaishuyuan.com${this}'",
+      "type": "xml",
+      "content": "#content > p:gt(1)"
+    }
+  }
+}
