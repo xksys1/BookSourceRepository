@@ -8,8 +8,10 @@ The repository is based on GitHub to provide an open book source repository for 
 
 | 书源 | API | 类型 | 排行榜 | 账号 | 版本 |
 | :----: | ------------- | :--: | :----: | :----: | :---: |
-| My716 | http://api.zhuishushenqi.com | 网文 | 4 | 否 |1.0.4 |
-| 稻草人书屋 | https://www.daocaorenshuwu.com | 综合 | 0 | 否 |1.0.0 |
+| My716 | http://api.zhuishushenqi.com | 网文 | 4 | 否 | 1.0.4 |
+| 稻草人书屋 | https://www.daocaorenshuwu.com | 综合 | 0 | 否 | 1.0.0 |
+| 笔趣阁 | https://www.biqubao.com | 网文 | 0 | 否 | 1.0.0 |
+| 动漫之家 | http://v3api.dmzj.com | 轻小说 | 0 | 否 | 1.0.0 |
 | 亲小说 | https://www.qinxiaoshuo.com | 轻小说 | 6 | 否 | 1.0.0 |
 | 轻之文库 | https://www.linovel.net | 轻小说 | 24 | 否 | 1.0.0 |
 
