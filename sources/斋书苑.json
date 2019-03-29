@@ -1,43 +1,33 @@
 {
   "name": "斋书苑",
-  "source": "https://www.zhaishuyuan.com",
-  "summary": "小说荟萃的地方",
-  "sort": 1,
   "version": 100,
+  "category": 1,
+  "url": "https://www.zhaishuyuan.com",
   "charset": "gb2312",
-  "search": {
-    "link": "https://www.zhaishuyuan.com/search/@post->s=${key}",
-    "type": "xml",
-    "list": "#sitembox > dl",
-    "item": {
-      "name": "dd > h3 > a",
-      "author": "dd.book_other > span",
-      "cover": "dt > a > img@xml->_src@js->'https:${this}'",
-      "summary": "dd.book_des",
-      "sort": "dd.book_other > span:nth-child(3)",
-      "metadata": "dt > a@xml->href@js->'https://www.zhaishuyuan.com${this}'"
-    }
-  },
   "metadata": {
-    "type": "xml",
-    "author": "",
-    "cover": "",
-    "summary": "",
-    "sort": "",
-    "update": "div.new > span.uptime > span",
-    "status": "div.count > ul > li:nth-child(2) > span",
-    "catalog": "div.motion > a@xml->href@js->'https://www.zhaishuyuan.com${this}'"
+    "name": ["dd > h3 > a"],
+    "author": ["dd.book_other > span:nth-child(1)"],
+    "cover": ["dt > a > img@attr->_src@js->'https://www.zhaishuyuan.com' + ${this}"],
+    "summary": ["dd.book_des"],
+    "category": ["dd.book_other > span:nth-child(3)"],
+    "status": ["div.count > ul > li:nth-child(2) > span"],
+    "update": ["div.new > span.uptime > span"],
+    "link": ["dt > a@attr->href@js->'https://www.zhaishuyuan.com' + ${this}"],
+    "catalog": ["div.motion > a@attr->href@js->'https://www.zhaishuyuan.com' + ${this}"]
   },
   "catalog": {
-    "type": "xml",
     "list": "#readerlists > ul > li",
-    "name": "",
-    "next": "",
+    "orderBy": 0,
     "chapter": {
       "name": "a",
-      "link": "a@xml->href@js->'https://www.zhaishuyuan.com${this}'",
-      "type": "xml",
-      "content": "#content > p:gt(1)"
+      "link": "a@attr->href@js->'https://www.zhaishuyuan.com' + ${this}"
     }
+  },
+  "content": {
+    "text": "#content > p:gt(1)"
+  },
+  "search": {
+    "link": "https://www.zhaishuyuan.com/search/@post->s=${key}",
+    "list": "#sitembox > dl"
   }
 }

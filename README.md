@@ -12,9 +12,9 @@ The repository is based on GitHub to provide an open book source repository for 
 | 作品集 | http://zuopinj.com | 出版 | 4 | 否 | 1.0.0 |
 | 稻草人书屋 | https://www.daocaorenshuwu.com | 综合 | 0 | 否 | 1.0.0 |
 | 笔趣阁 | https://www.biqubao.com | 网文 | 0 | 否 | 1.0.0 |
-| 动漫之家 | http://v3api.dmzj.com | 轻小说 | 0 | 否 | 1.0.0 |
 | 亲小说 | https://www.qinxiaoshuo.com | 轻小说 | 6 | 否 | 1.0.0 |
 | 轻之文库 | https://www.linovel.net | 轻小说 | 24 | 否 | 1.0.0 |
+| 斋书苑 | https://www.zhaishuyuan.com | 网文 | 0 | 否 | 1.0.0 |
 
 ---
 
