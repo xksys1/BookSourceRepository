@@ -1,47 +1,37 @@
 {
   "name": "作品集",
-  "source": "http://zuopinj.com",
-  "summary": "This source is supported by zoupinj.",
-  "sort": 0,
   "version": 100,
+  "category": 0,
+  "url": "http://zuopinj.com",
   "charset": "utf-8",
-  "search": {
-    "link": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
-    "type": "xml",
-    "list": "div.search-bookele",
-    "item": {
-      "name": "a > h3",
-      "author": "",
-      "cover": "a > img@xml->src",
-      "summary": "a > p",
-      "sort": "",
-      "metadata": "a@xml->href"
-    }
-  },
   "metadata": {
-    "type": "xml",
-    "author": ".book_info > .infos > span@js->'${this}'.match('作者：(.*)最后更新')[1]",
-    "cover": ".book_info > .pic > img@xml->src",
-    "summary": ".book_info > p",
-    "sort": ".tuijian > a.tag-bg-blue",
-    "update": ".book_info > .infos > span > span@js->'${this}'.match('最后更新：(.*)状态')[1]",
-    "status": ".book_info > .infos > span > span@js->'${this}'.match('状态(.*)')[1]",
-    "catalog": ""
+    "name": ["a > h3", "a@js->${this}.match('《(.*)》')[1]"],
+    "author": [".book_info > .infos > span@js->${this}.match('作者：(.*)最后更新')[1]", ".s > a"],
+    "cover": ["a > img@attr->src"],
+    "summary": ["a > p", ".u"],
+    "category": [".tuijian > a.tag-bg-blue"],
+    "status": [".book_info > .infos > span > span@js->${this}.match('状态(.*)')[1]"],
+    "update": [".book_info > .infos > span > span@js->${this}.match('最后更新：(.*)状态')[1]"],
+    "link": ["a@attr->href"],
+    "catalog": []
   },
   "catalog": {
-    "type": "xml",
     "list": ".book_list > ul > li",
-    "name": "",
-    "next": "",
+    "orderBy": 0,
     "chapter": {
       "name": "a",
-      "link": "a@xml->href",
-      "type": "xml",
-      "content": "#htmlContent"
+      "link": "a@attr->href"
     }
   },
+  "content": {
+    "text": "#htmlContent"
+  },
+  "search": {
+    "link": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
+    "list": ".search-bookele"
+  },
   "rank": {
-    "links": [
+    "link": [
       {
         "name": "排行榜",
         "link": "http://zuopinj.com/alltotal/"
@@ -59,21 +49,12 @@
         "link": "http://zuopinj.com/newupdate/"
       }
     ],
-    "type": "xml",
+    "list": ".listbox > ul > li",
     "page": {
       "index": 1,
       "limit": 30,
-      "start": "",
+      "begin": "",
       "next": "index_${index}.html"
-    },
-    "list": ".listbox > ul > li",
-    "item": {
-      "name": "a@js->'${this}'.match('《(.*)》')[1]",
-      "author": ".s > a",
-      "cover": "a > img@xml->src",
-      "summary": ".u",
-      "sort": "",
-      "metadata": "a@xml->href"
     }
   }
 }
