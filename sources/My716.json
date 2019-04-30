@@ -10,12 +10,16 @@
     "cover": ["$.cover@js->'http://statics.zhuishushenqi.com' + ${this}"],
     "summary": ["$.shortIntro"],
     "category": ["$.cat", "$.majorCate"],
-    "update": ["$.[?(@.source=='my176')].updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"],
-    "link": ["$._id@js->'http://api.zhuishushenqi.com/atoc?view=summary&book=' + ${this}"],
-    "catalog": ["$.[?(@.source=='my176')]._id@js->'http://api.zhuishushenqi.com/mix-atoc/' + ${this} + '?view=chapters'"]
+    "update": [
+      "$.updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"
+    ],
+    "link": ["$._id@js->'http://api.zhuishushenqi.com/book/' + ${this}"],
+    "catalog": [
+      "$._id@js->'http://api.zhuishushenqi.com/mix-atoc/' + ${this} + '?view=chapters'"
+    ]
   },
   "catalog": {
-    "list": "$.chapters",
+    "list": "$.mixToc.chapters",
     "orderBy": 0,
     "chapter": {
       "name": "$.title",
