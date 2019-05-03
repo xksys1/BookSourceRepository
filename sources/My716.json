@@ -1,6 +1,6 @@
 {
   "name": "My716",
-  "version": 105,
+  "version": 106,
   "category": 1,
   "url": "http://api.zhuishushenqi.com",
   "charset": "utf-8",
@@ -13,6 +13,7 @@
     "update": [
       "$.updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"
     ],
+    "lastChapter": ["$.lastChapter"],
     "link": ["$._id@js->'http://api.zhuishushenqi.com/book/' + ${this}"],
     "catalog": [
       "$._id@js->'http://api.zhuishushenqi.com/mix-atoc/' + ${this} + '?view=chapters'"
