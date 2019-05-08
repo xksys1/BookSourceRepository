@@ -1,6 +1,6 @@
 {
   "name": "稻草人书屋",
-  "version": 100,
+  "version": 101,
   "category": 3,
   "url": "https://www.daocaorenshuwu.com",
   "charset": "utf-8",
@@ -12,6 +12,7 @@
     "category": ["meta[property=og:novel:category]@attr->content"],
     "status": ["meta[property=og:novel:status]@attr->content"],
     "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
     "link": ["a@attr->href@js->'https://www.daocaorenshuwu.com/' + ${this}"],
     "catalog": []
   },

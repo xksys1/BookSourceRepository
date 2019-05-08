@@ -16,7 +16,7 @@
       "category": 0,
       "rank": 4,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "稻草人书屋",
@@ -24,7 +24,7 @@
       "category": 3,
       "rank": 0,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "斋书苑",
@@ -32,7 +32,7 @@
       "category": 1,
       "rank": 0,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "笔趣阁",
@@ -40,7 +40,7 @@
       "category": 1,
       "rank": 0,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "亲小说",

@@ -8,13 +8,13 @@ The repository is based on GitHub to provide an open book source repository for 
 
 | 书源 | API | 类型 | 排行榜 | 账号 | 版本 |
 | :----: | ------------- | :--: | :----: | :----: | :---: |
-| My716 | http://api.zhuishushenqi.com | 网文 | 4 | 否 | 1.0.4 |
-| 作品集 | http://zuopinj.com | 出版 | 4 | 否 | 1.0.0 |
-| 稻草人书屋 | https://www.daocaorenshuwu.com | 综合 | 0 | 否 | 1.0.0 |
-| 笔趣阁 | https://www.biqubao.com | 网文 | 0 | 否 | 1.0.0 |
+| My716 | http://api.zhuishushenqi.com | 网文 | 4 | 否 | 1.0.6 |
+| 作品集 | http://zuopinj.com | 出版 | 4 | 否 | 1.0.1 |
+| 稻草人书屋 | https://www.daocaorenshuwu.com | 综合 | 0 | 否 | 1.0.1 |
+| 笔趣阁 | https://www.biqubao.com | 网文 | 0 | 否 | 1.0.1 |
 | 亲小说 | https://www.qinxiaoshuo.com | 轻小说 | 6 | 否 | 1.0.0 |
 | 轻之文库 | https://www.linovel.net | 轻小说 | 24 | 否 | 1.0.0 |
-| 斋书苑 | https://www.zhaishuyuan.com | 网文 | 0 | 否 | 1.0.0 |
+| 斋书苑 | https://www.zhaishuyuan.com | 网文 | 0 | 否 | 1.0.1 |
 
 ---
 
@@ -33,6 +33,7 @@ The repository is based on GitHub to provide an open book source repository for 
     - category： 分类，例如：玄幻，武侠，连载等
     - status：状态（选填），完结 或 连载
     - update：更新时间（选填）（不填将无法检查更新）
+    - lastChapter：更新章节（选填）（不填将无法检查更新）
     - link： 书籍详情地址
     - catalog：目录地址（不填视为目录与详情同一个地址）
 - catalog： 目录

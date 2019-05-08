@@ -1,6 +1,6 @@
 {
   "name": "作品集",
-  "version": 100,
+  "version": 101,
   "category": 0,
   "url": "http://zuopinj.com",
   "charset": "utf-8",
@@ -12,6 +12,7 @@
     "category": [".tuijian > a.tag-bg-blue"],
     "status": [".book_info > .infos > span > span@js->${this}.match('状态(.*)')[1]"],
     "update": [".book_info > .infos > span > span@js->${this}.match('最后更新：(.*)状态')[1]"],
+    "lastChapter": [".book_info > .upd > a"],
     "link": ["a@attr->href"],
     "catalog": []
   },
