@@ -1,6 +1,6 @@
 {
   "name": "笔趣阁",
-  "version": 101,
+  "version": 102,
   "category": 1,
   "url": "https://www.biqubao.com",
   "charset": "utf-8",
@@ -11,7 +11,7 @@
     "summary": ["p.result-game-item-desc"],
     "category": ["div.result-game-item-info > p:nth-child(2) > span:nth-child(2)"],
     "status": ["meta[property=og:novel:status]@attr->content"],
-    "update": ["meta[property=og:novel:og:novel:update_time]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
     "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
     "link": ["a.result-game-item-pic-link@attr->href"],
     "catalog": []
