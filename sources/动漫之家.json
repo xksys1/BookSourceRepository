@@ -1,0 +1,40 @@
+{
+  "name": "动漫之家",
+  "version": 100,
+  "category": 2,
+  "url": "http://v3api.dmzj.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.authors"],
+    "cover": ["$.cover"],
+    "summary": ["$.introduction"],
+    "category": ["$.cat", "$.majorCate"],
+    "update": [
+      "$.last_update_time@js->function getTime(str){ var date = new Date(str*1000); Y = date.getFullYear() + '-'; M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-'; D = date.getDate() + ' '; h = date.getHours() + ':'; m = date.getMinutes() + ':'; s = date.getSeconds(); return Y+M+D+h+m+s; } getTime(${this})"
+    ],
+    "link": ["$.id@js->'https://v3api.dmzj.com/novel/' + ${this} + '.json'"],
+    "catalog": [
+      "$.id@js->'http://v3api.dmzj.com/novel/chapter/' + ${this} + '.json'"
+    ]
+  },
+  "catalog": {
+    "list": "$.*",
+    "orderBy": 0,
+    "booklet": {
+      "name": "$.volume_name",
+      "list": "$.chapters"
+    },
+    "chapter": {
+      "name": "$.chapter_name",
+      "link": "$.chapter_id@js->'http://v3api.dmzj.com/novel/download/999999_' + ${super.$.volume_id} + '_' + ${this} + '.txt'"
+    }
+  },
+  "content": {
+    "text": "${html}"
+  },
+  "search": {
+    "link": "http://v3api.dmzj.com/search/show/1/${key}/0.json",
+    "list": "$.*"
+  }
+}

@@ -57,6 +57,14 @@
       "rank": 24,
       "auth": false,
       "version": 100
+    },
+    {
+      "name": "动漫之家",
+      "url": "http://v3api.dmzj.com",
+      "category": 2,
+      "rank": 0,
+      "auth": false,
+      "version": 100
     }
   ]
 }
