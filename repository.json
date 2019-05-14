@@ -65,6 +65,14 @@
       "rank": 0,
       "auth": false,
       "version": 100
+    },
+    {
+      "name": "我的小书屋",
+      "url": "https://m.sanyuedev.top",
+      "category": 1,
+      "rank": 3,
+      "auth": false,
+      "version": 100
     }
   ]
 }

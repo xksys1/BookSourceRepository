@@ -1,0 +1,57 @@
+{
+  "name": "我的小书屋",
+  "version": 100,
+  "category": 1,
+  "url": "https://m.sanyuedev.top",
+  "charset": "utf-8",
+  "metadata": {
+    "name": [".book-title", "meta[property=og:novel:book_name]@attr->content"],
+    "author": [".book-author", "meta[property=og:novel:author]@attr->content"],
+    "cover": ["img@attr->src", "meta[property=og:image]@attr->content"],
+    "summary": [".book-desc", "meta[property=og:description]@attr->content"],
+    "category": ["em.tag-small:nth-child(1)", "meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a@attr->href@js->${url} + ${this}"],
+    "catalog": ["a@js->${metadata.link}.replace('m.','book.')"]
+  },
+  "catalog": {
+    "list": "dl > dd:gt(6)",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href@js->${url}.replace('m.','book.') + ${this}"
+    }
+  },
+  "content": {
+    "text": "#chaptercontent"
+  },
+  "search": {
+    "link": "https://m.sanyuedev.top/search.html@post->searchkey=${key}",
+    "list": "li.book-li > a"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "点击排行",
+        "link": "https://m.sanyuedev.top/top/allvisit"
+      },
+      {
+        "name": "收藏排行",
+        "link": "https://m.sanyuedev.top/top/marknum"
+      },
+      {
+        "name": "最新入库",
+        "link": "https://m.sanyuedev.top/top/postdate"
+      }
+    ],
+    "list": "li.book-li > a",
+    "page": {
+      "index": 1,
+      "limit": 15,
+      "begin": ".html",
+      "next": "/${index}.html"
+    }
+  }
+}

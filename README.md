@@ -15,6 +15,7 @@ The repository is based on GitHub to provide an open book source repository for 
 | 亲小说 | https://www.qinxiaoshuo.com | 轻小说 | 2 | 否 | 1.0.1 |
 | 轻之文库 | https://www.linovel.net | 轻小说 | 24 | 否 | 1.0.0 |
 | 斋书苑 | https://www.zhaishuyuan.com | 网文 | 0 | 否 | 1.0.1 |
+| 我的小书屋 | https://m.sanyuedev.top | 网文 | 3 | 否 | 1.0.0 |
 
 ---
 
