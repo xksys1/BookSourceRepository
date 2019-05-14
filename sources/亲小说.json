@@ -1,73 +1,51 @@
 {
   "name": "亲小说",
-  "version": 100,
+  "version": 101,
   "category": 2,
   "url": "https://www.qinxiaoshuo.com",
   "charset": "utf-8",
   "metadata": {
-    "name": ["dd > h3 > a", "div.d_title > h1"],
-    "author": ["dd.book_other > span", "div.d_title > span > a"],
-    "cover": ["dt > a > mip-img@attr->src", "#bookimg > mip-img@attr->src"],
-    "summary": ["dd.book_des", "#bookintro"],
-    "category": ["#tags > a"],
-    "status": ["#bookright > ui > li > span"],
-    "update": ["#uptime > span"],
-    "link": ["dt > a@attr->href@js->'https://www.qinxiaoshuo.com' + ${this}", "div.d_title > h1@js->'https://www.qinxiaoshuo.com/book/' + ${this}"],
-    "catalog": [],
-    "extra": [
-      {
-        "key": "bookId",
-        "value": "meta[property=og:image]@attr->content@js->${this}.match(/\\d+/g)[0]"
-      }
-    ]
+    "name": [".item_name > a", ".book_name"],
+    "author": [".item_name > span", "div.info > a"],
+    "cover": [".item_img > a > img@attr->src", "book_img@attr->src"],
+    "summary": [".item_intro", ".book_intro"],
+    "category": [".tags > a"],
+    "status": ["div.info:nth-child(3) > span"],
+    "update": ["div.info:nth-child(4) > span"],
+    "link": [".item_name > a@attr->href@js->'https:'+${this}"],
+    "catalog": []
   },
   "catalog": {
-    "list": "mip-accordion > section",
+    "list": ".volume",
     "orderBy": 0,
     "booklet": {
-      "name": "div > h3",
-      "list": "div > div"
+      "name": ".volume_name > h3",
+      "list": ".chapters > a"
     },
     "chapter": {
       "name": "a",
-      "link": "a@attr->href@js->'https://static.qinxiaoshuo.com/book/bookdata/' + ${extra.bookId} + '/' + ${this}.substring(${this}.lastIndexOf('/') + 1) + '.txt'"
+      "link": "a@attr->href@js->'https:'+${this}"
     }
   },
   "content": {
-    "text": ""
+    "text": "div#chapter_content"
   },
   "search": {
-    "link": "https://www.qinxiaoshuo.com/book/search/?keyword=${key}",
-    "list": "#sitebox > dl"
+    "link": "https://www.qinxiaoshuo.com/search/?keyword=${key}",
+    "list": "div.book_item"
   },
   "rank": {
     "link": [
       {
         "name": "日轻",
-        "link": "https://www.qinxiaoshuo.com/book/tag/日轻小说"
-      },
-      {
-        "name": "后宫",
-        "link": "https://www.qinxiaoshuo.com/tag/后宫小说"
-      },
-      {
-        "name": "战争",
-        "link": "https://www.qinxiaoshuo.com/tag/战争小说"
-      },
-      {
-        "name": "魔法",
-        "link": "https://www.qinxiaoshuo.com/tag/魔法小说"
+        "link": "https://www.qinxiaoshuo.com/tag/日轻"
       },
       {
         "name": "科幻",
-        "link": "https://www.qinxiaoshuo.com/tag/科幻小说"
-      },
-      {
-        "name": "校园",
-        "link": "https://www.qinxiaoshuo.com/tag/校园小说"
+        "link": "https://www.qinxiaoshuo.com/tag/科幻"
       }
     ],
-    "list": "#sitebox > dl",
+    "list": "div.book_item",
     "page": {
       "index": 1,
       "limit": 16,

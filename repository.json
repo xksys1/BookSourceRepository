@@ -57,6 +57,14 @@
       "rank": 24,
       "auth": false,
       "version": 100
+    },
+    {
+      "name": "88读书网",
+      "url": "https://www.88dush.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
     }
   ]
 }
