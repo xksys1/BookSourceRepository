@@ -19,6 +19,93 @@ The repository is based on GitHub to provide an open book source repository for 
 
 ---
 
+### 书源制作
+准备工作，需了解基础的Html/CSS/JavaScript内容，以及Jsoup选择器功能。
+
+参考内容：[Jsoup选择器文档](https://jsoup.org/apidocs/org/jsoup/select/Selector.html) 和 [Jsoup调试神器](https://try.jsoup.org)
+
+
+#### 1. 源网站
+教程以 作品集（http://zuopinj.com）为例讲解。
+
+#### 2. 基础信息
+根据源网站信息创建一个书源文件：作品集.json
+
+```
+{
+	"name": "作品集",
+	"version": 100,
+  	"category": 0,
+  	"url": "http://zuopinj.com",
+  	"charset": "utf-8"
+}
+```
+属性讲解
+
+| 属性 | 含义 | 讲解 |
+| :-: | :-: | --- |
+| name | 书源名 | 推荐使用源网站名字清晰明了|
+| version | 版本号 | 新建写100（1.0.0）当内容变化时递增，如101（1.0.1）|
+| category | 类别 | 0（出版）、1（网文）、2（轻小说）、3（综合）|
+| url | 源网站 | 务必真实有效，否则会影响到后续属性调用|
+| charset | 字符集 | utf-8 gbk gbk2312 影响search等请求时的编码，非源网站的编码 |
+
+#### 3. 搜索
+书源必须具有搜索功能，填充入上一步的json中如下：
+
+```
+{
+	... 第2步内容
+	"search": {
+		"link": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
+		"list": ".search-bookele"
+	}
+}
+```
+属性讲解
+
+| 属性 | 含义 | 讲解 |
+| :-: | :-: | --- |
+| link | 地址 | ${key}代表搜索关键词，搜索时自动替换为用户输入的词； @post-> 表明后续使用POST方式传递参数，如果是GET方式不需要特殊声明，例如http://search.com?key=${key}意味key使用GET方式请求内容 |
+| list | 结果 | 通过Jsoup选择结果元素 |
+
+举例说明：
+
+请求地址：http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=剑
+
+请求结果（省略显示）：
+
+```
+<html>
+	<head></head>
+	<body>
+		<div>
+			<header></header>
+			<div>
+				<section>
+					<div>
+						<div class="search-bookele">
+							<a class="wrap f-cb" href="http://liliang.zuopinj.com/7833/">
+								<img class="img" src="http://zuopinj.com/d/file/wx/liliang/20151031/32103c8de0d366bae81a161786eb7e19.jpg" alt="新蜀山剑侠传">
+								<h3>新蜀山剑侠传</h3>
+								<p class="abstract">四川峨嵋山，乃蜀中有名胜地。昔人谓：“西蜀山水多奇，而额相尤胜。”但见苍松翠柏，尽现庙宇守规，不下数百座。每年前山善男信女，不远千里而来；加以山青水秀，层峦叠幛，气象万千，实让人流</p>
+							</a>
+						</div>
+						<div class="search-bookele"></div>
+						<div class="search-bookele"></div>
+						<div class="search-bookele"></div>
+						<div class="search-bookele"></div>
+					</div>
+				</section>
+				<section></section>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+</html>
+```
+使用.search-bookele选择出```<div class="search-bookele">```元素，作为搜索结果进行解析。
+
 ##### 书源属性讲解
 
 - name ：书源名字
