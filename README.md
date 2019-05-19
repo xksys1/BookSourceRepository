@@ -33,11 +33,11 @@ The repository is based on GitHub to provide an open book source repository for 
 
 ```
 {
-	"name": "作品集",
-	"version": 100,
-  	"category": 0,
-  	"url": "http://zuopinj.com",
-  	"charset": "utf-8"
+  "name": "作品集",
+  "version": 100,
+  "category": 0,
+  "url": "http://zuopinj.com",
+  "charset": "utf-8"
 }
 ```
 属性讲解
@@ -55,11 +55,11 @@ The repository is based on GitHub to provide an open book source repository for 
 
 ```
 {
-	... 第2步内容
-	"search": {
-		"link": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
-		"list": ".search-bookele"
-	}
+  ... 第2步内容
+  "search": {
+    "link": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
+    "list": ".search-bookele"
+  }
 }
 ```
 属性讲解
@@ -73,38 +73,9 @@ The repository is based on GitHub to provide an open book source repository for 
 
 请求地址：http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=剑
 
-请求结果（省略显示）：
+请求结果：
 
-```
-<html>
-	<head></head>
-	<body>
-		<div>
-			<header></header>
-			<div>
-				<section>
-					<div>
-						<div class="search-bookele">
-							<a class="wrap f-cb" href="http://liliang.zuopinj.com/7833/">
-								<img class="img" src="http://zuopinj.com/d/file/wx/liliang/20151031/32103c8de0d366bae81a161786eb7e19.jpg" alt="新蜀山剑侠传">
-								<h3>新蜀山剑侠传</h3>
-								<p class="abstract">四川峨嵋山，乃蜀中有名胜地。昔人谓：“西蜀山水多奇，而额相尤胜。”但见苍松翠柏，尽现庙宇守规，不下数百座。每年前山善男信女，不远千里而来；加以山青水秀，层峦叠幛，气象万千，实让人流</p>
-							</a>
-						</div>
-						<div class="search-bookele"></div>
-						<div class="search-bookele"></div>
-						<div class="search-bookele"></div>
-						<div class="search-bookele"></div>
-					</div>
-				</section>
-				<section></section>
-			</div>
-		</div>
-		<footer></footer>
-	</body>
-</html>
-```
-使用.search-bookele选择出```<div class="search-bookele">```元素，作为搜索结果进行解析。
+![](images/3.png)使用.search-bookele选择出```<div class="search-bookele">```元素，作为搜索结果进行解析。
 
 ##### 书源属性讲解
 
