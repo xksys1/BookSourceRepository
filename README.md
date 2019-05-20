@@ -26,7 +26,7 @@ The repository is based on GitHub to provide an open book source repository for 
 
 
 #### 1. 源网站
-教程以 作品集（http://zuopinj.com）为例讲解。
+教程以 [作品集](http://zuopinj.com) 为例讲解。
 
 #### 2. 基础信息
 根据源网站信息创建一个书源文件：作品集.json
@@ -66,7 +66,7 @@ The repository is based on GitHub to provide an open book source repository for 
 
 | 属性 | 含义 | 讲解 |
 | :-: | :-: | --- |
-| link | 地址 | ${key}代表搜索关键词，搜索时自动替换为用户输入的词； @post-> 表明后续使用POST方式传递参数，如果是GET方式不需要特殊声明，例如http://search.com?key=${key}意味key使用GET方式请求内容 |
+| link | 地址 | ${key}代表搜索关键词，搜索时自动替换为用户输入的词； @post-> 表明后续使用POST方式传递参数，如果是GET方式不需要特殊声明，例如 http://search.com?key=${key} 意味key使用GET方式请求内容 |
 | list | 结果 | 通过Jsoup选择结果元素 |
 
 举例说明：
@@ -75,7 +75,22 @@ The repository is based on GitHub to provide an open book source repository for 
 
 请求结果：
 
-![](images/3.png)使用.search-bookele选择出```<div class="search-bookele">```元素，作为搜索结果进行解析。
+![](images/3.png)
+
+##### 使用.search-bookele选择出```<div class="search-bookele">```元素，作为搜索结果进行解析。
+
+#### 4. 元数据
+通过第3步获得到搜索列表时，需要解析出书籍元数据用于页面显示。此时在json中再次补充：
+
+```
+{
+  ... 第2步内容
+  "metadata": {
+    
+  }
+  "search": { ... 第3步内容 }
+}
+```
 
 ##### 书源属性讲解
 
