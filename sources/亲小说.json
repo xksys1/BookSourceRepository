@@ -1,6 +1,6 @@
 {
   "name": "亲小说",
-  "version": 101,
+  "version": 102,
   "category": 2,
   "url": "https://www.qinxiaoshuo.com",
   "charset": "utf-8",
@@ -28,7 +28,11 @@
     }
   },
   "content": {
-    "text": "div#chapter_content"
+    "text": "div#chapter_content",
+    "next": {
+      "link": "div.buttons > p > a",
+      "text": "下一页"
+    }
   },
   "search": {
     "link": "https://www.qinxiaoshuo.com/search/?keyword=${key}",

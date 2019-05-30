@@ -1,6 +1,6 @@
 {
   "name": "稻草人书屋",
-  "version": 101,
+  "version": 102,
   "category": 3,
   "url": "https://www.daocaorenshuwu.com",
   "charset": "utf-8",
@@ -26,6 +26,10 @@
   },
   "content": {
     "text": "div#content > div#cont-text",
+    "next": {
+      "link": "div.col-md-6 > a",
+      "text": "下一页"
+    },
     "filter": ["div#content > div#cont-text > style@js->${this}.replace(/\\{.+\\}/, '').trim()"]
   },
   "search": {

@@ -24,7 +24,15 @@
       "category": 3,
       "rank": 0,
       "auth": false,
-      "version": 101
+      "version": 102
+    },
+    {
+      "name": "读书369",
+      "url": "http://www.dushu369.com",
+      "category": 0,
+      "rank": 0,
+      "auth": false,
+      "version": 100
     },
     {
       "name": "斋书苑",
@@ -48,7 +56,7 @@
       "category": 2,
       "rank": 2,
       "auth": false,
-      "version": 101
+      "version": 102
     },
     {
       "name": "轻之文库",

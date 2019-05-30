@@ -1,0 +1,34 @@
+{
+  "name": "读书369",
+  "version": 100,
+  "category": 0,
+  "url": "http://www.dushu369.com",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["a@js->${this}.match(/《(\\S*)》/)[1]", "td.cntitle@js->${this}.match(/《(\\S*)》/)[1]"],
+    "author": ["a@js->${this}.match(/ +(\\S*)/)[1]", "td.cntitle@js->${this}.match(/(\\S*)《/)[1]"],
+    "cover": [],
+    "summary": ["td.Readme"],
+    "category": [],
+    "status": ["a@js->'完结'"],
+    "update": [],
+    "lastChapter": [],
+    "link": ["a@attr->href@js->${url} + ${this}"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "a.a0",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href@js->${url} + ${this}"
+    }
+  },
+  "content": {
+    "text": "td.content"
+  },
+  "search": {
+    "link": "http://www.dushu369.com/book/search.asp@post->Keyword=${key}&select=Article&Submit=搜索&Field=Title",
+    "list": "a.a0"
+  }
+}
