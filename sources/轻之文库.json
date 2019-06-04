@@ -1,6 +1,6 @@
 {
   "name": "轻之文库",
-  "version": 100,
+  "version": 101,
   "category": 2,
   "url": "https://www.linovel.net",
   "charset": "utf-8",
@@ -11,8 +11,8 @@
     "summary": ["p.intro@js->${this}.substring(4)"],
     "category": ["div.book-cats"],
     "update": ["small.chapter-update-time"],
-    "link": ["a@attr->href@js->'https://www.linovel.net' + ${this}"],
-    "catalog": ["div.primary > a@attr->href@js->'https://www.linovel.net' + ${this}.substring(0, ${this}.lastIndexOf('/')) + '.html#catalog'"]
+    "link": ["a@attr->href"],
+    "catalog": ["div.recent-update > a.more@attr->href"]
   },
   "catalog": {
     "list": "div.section-list > div",
@@ -23,7 +23,7 @@
     },
     "chapter": {
       "name": "a",
-      "link": "a@attr->href@js->'https://www.linovel.net' + ${this}"
+      "link": "a@attr->href"
     }
   },
   "content": {

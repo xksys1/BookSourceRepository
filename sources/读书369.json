@@ -1,6 +1,6 @@
 {
   "name": "读书369",
-  "version": 100,
+  "version": 101,
   "category": 0,
   "url": "http://www.dushu369.com",
   "charset": "gb2312",
@@ -13,7 +13,7 @@
     "status": ["a@js->'完结'"],
     "update": [],
     "lastChapter": [],
-    "link": ["a@attr->href@js->${url} + ${this}"],
+    "link": ["a@attr->href"],
     "catalog": []
   },
   "catalog": {
@@ -21,7 +21,7 @@
     "orderBy": 0,
     "chapter": {
       "name": "a",
-      "link": "a@attr->href@js->${url} + ${this}"
+      "link": "a@attr->href"
     }
   },
   "content": {

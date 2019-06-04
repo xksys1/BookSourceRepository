@@ -24,7 +24,7 @@
       "category": 3,
       "rank": 0,
       "auth": false,
-      "version": 102
+      "version": 103
     },
     {
       "name": "读书369",
@@ -32,7 +32,7 @@
       "category": 0,
       "rank": 0,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "斋书苑",
@@ -40,7 +40,7 @@
       "category": 1,
       "rank": 0,
       "auth": false,
-      "version": 101
+      "version": 102
     },
     {
       "name": "笔趣阁",
@@ -48,7 +48,7 @@
       "category": 1,
       "rank": 0,
       "auth": false,
-      "version": 102
+      "version": 103
     },
     {
       "name": "亲小说",
@@ -56,7 +56,7 @@
       "category": 2,
       "rank": 2,
       "auth": false,
-      "version": 102
+      "version": 103
     },
     {
       "name": "轻之文库",
@@ -64,7 +64,7 @@
       "category": 2,
       "rank": 24,
       "auth": false,
-      "version": 100
+      "version": 101
     },
     {
       "name": "动漫之家",
@@ -80,7 +80,7 @@
       "category": 1,
       "rank": 3,
       "auth": false,
-      "version": 100
+      "version": 101
     }
   ]
 }

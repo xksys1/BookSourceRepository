@@ -1,6 +1,6 @@
 {
   "name": "亲小说",
-  "version": 102,
+  "version": 103,
   "category": 2,
   "url": "https://www.qinxiaoshuo.com",
   "charset": "utf-8",
@@ -12,7 +12,7 @@
     "category": [".tags > a"],
     "status": ["div.info:nth-child(3) > span"],
     "update": ["div.info:nth-child(4) > span"],
-    "link": [".item_name > a@attr->href@js->'https:'+${this}"],
+    "link": [".item_name > a@attr->href"],
     "catalog": []
   },
   "catalog": {
@@ -24,7 +24,7 @@
     },
     "chapter": {
       "name": "a",
-      "link": "a@attr->href@js->'https:'+${this}"
+      "link": "a@attr->href"
     }
   },
   "content": {

@@ -1,6 +1,6 @@
 {
   "name": "笔趣阁",
-  "version": 102,
+  "version": 103,
   "category": 1,
   "url": "https://www.biqubao.com",
   "charset": "utf-8",
@@ -21,7 +21,7 @@
     "orderBy": 0,
     "chapter": {
       "name": "a",
-      "link": "a@attr->href@js->'https://www.biqubao.com' + ${this}"
+      "link": "a@attr->href"
     }
   },
   "content": {
