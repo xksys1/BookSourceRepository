@@ -3,20 +3,12 @@
   "summary": "Provided links and based on github.com",
   "list": [
     {
-      "name": "My716",
-      "url": "http://api.zhuishushenqi.com",
+      "name": "笔趣阁",
+      "url": "https://www.biqubao.com",
       "category": 1,
-      "rank": 4,
+      "rank": 0,
       "auth": false,
-      "version": 106
-    },
-    {
-      "name": "作品集",
-      "url": "http://zuopinj.com",
-      "category": 0,
-      "rank": 4,
-      "auth": false,
-      "version": 101
+      "version": 103
     },
     {
       "name": "稻草人书屋",
@@ -27,10 +19,26 @@
       "version": 103
     },
     {
+      "name": "作品集",
+      "url": "http://zuopinj.com",
+      "category": 0,
+      "rank": 4,
+      "auth": false,
+      "version": 101
+    },
+    {
       "name": "读书369",
       "url": "http://www.dushu369.com",
       "category": 0,
       "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "我的小书屋",
+      "url": "https://m.sanyuedev.top",
+      "category": 1,
+      "rank": 3,
       "auth": false,
       "version": 101
     },
@@ -41,14 +49,6 @@
       "rank": 0,
       "auth": false,
       "version": 102
-    },
-    {
-      "name": "笔趣阁",
-      "url": "https://www.biqubao.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 103
     },
     {
       "name": "亲小说",
@@ -73,14 +73,6 @@
       "rank": 0,
       "auth": false,
       "version": 100
-    },
-    {
-      "name": "我的小书屋",
-      "url": "https://m.sanyuedev.top",
-      "category": 1,
-      "rank": 3,
-      "auth": false,
-      "version": 101
     }
   ]
 }
