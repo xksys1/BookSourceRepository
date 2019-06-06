@@ -35,6 +35,14 @@
       "version": 101
     },
     {
+      "name": "55小说网",
+      "url": "http://www.liushuba.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
       "name": "我的小书屋",
       "url": "https://m.sanyuedev.top",
       "category": 1,

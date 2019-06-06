@@ -1,0 +1,34 @@
+{
+  "name": "55小说网",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.liushuba.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["dd.name", "#book > h1@js->${this}.match('(.*)本书作者')[1]"],
+    "author": ["dd.author", "#book > h1 > span > a"],
+    "cover": ["div.atc > img@attr->src"],
+    "summary": ["div.intro > p:nth-child(2)"],
+    "category": ["tbody > tr > td:nth-child(2)@js->${this}.match('作品类别：(.*)')[1]"],
+    "status": ["tbody > tr:nth-child(2) > td:nth-child(2)@js->${this}.match('文章状态：(.*)')[1]"],
+    "update": ["tbody > tr:nth-child(2) > td:nth-child(1)@js->${this}.match('最后更新：(.*)')[1]"],
+    "lastChapter": ["div.last > a"],
+    "link": ["dd.name > a@attr->href"],
+    "catalog": ["dl.cl > dd > ul > li.a > a@attr->href"]
+  },
+  "catalog": {
+    "list": "tbody > tr > td",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#contents"
+  },
+  "search": {
+    "link": "http://www.liushuba.com/modules/article/search.php@post->searchkey=${key}&searchtype=articlename&submit=搜索",
+    "list": "div.listtab > dl"
+  }
+}
