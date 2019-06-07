@@ -19,6 +19,14 @@
       "version": 103
     },
     {
+      "name": "书农小说",
+      "url": "http://www.qxswk.com",
+      "category": 0,
+      "rank": 4,
+      "auth": false,
+      "version": 100
+    },
+    {
       "name": "作品集",
       "url": "http://zuopinj.com",
       "category": 0,

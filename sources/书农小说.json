@@ -1,0 +1,61 @@
+{
+  "name": "书农小说",
+  "version": 100,
+  "category": 0,
+  "url": "http://www.qxswk.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["font@js->${this}.match('《(.*)》')[1]", ".name > a", "meta[property=og:title]@attr->content"],
+    "author": [".s > a", ".author > a","meta[property=og:novel:author]@attr->content"],
+    "cover": ["img@attr->src", ".common > img@attr->src","meta[property=og:image]@attr->content"],
+    "summary": [".u", ".desc","meta[property=og:description]@attr->content"],
+    "category": [".kind > a","meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": ".book_list > ul > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#htmlContent > p:gt(0)"
+  },
+  "search": {
+    "link": "http://www.qxswk.com/e/search/index.php@post->tbname=bookname&show=title&tempid=1&keyboard=${key}",
+    "list": "div.listbox > ul > li"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "热门榜",
+        "link": "http://www.qxswk.com/hot/"
+      },
+      {
+        "name": "推荐榜",
+        "link": "http://www.qxswk.com/isgood/"
+      },
+      {
+        "name": "下载榜",
+        "link": "http://www.qxswk.com/down/"
+      },
+      {
+        "name": "更新榜",
+        "link": "http://www.qxswk.com/new/"
+      }
+    ],
+    "list": ".fl_book > ul > li",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "",
+      "next": "index_${index}.html"
+    }
+  }
+}
