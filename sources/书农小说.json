@@ -25,7 +25,7 @@
     }
   },
   "content": {
-    "text": "#htmlContent > p:gt(0)"
+    "text": "#htmlContent > p:not(:has(a))"
   },
   "search": {
     "link": "http://www.qxswk.com/e/search/index.php@post->tbname=bookname&show=title&tempid=1&keyboard=${key}",
