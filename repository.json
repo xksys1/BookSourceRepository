@@ -11,6 +11,15 @@
       "version": 103
     },
     {
+      "name": "磨铁中文网",
+      "url": "http://m.motie.com",
+      "category": 1,
+      "rank": 12,
+      "auth": true,
+      "version": 100,
+      "beta": true
+    },
+    {
       "name": "稻草人书屋",
       "url": "https://www.daocaorenshuwu.com",
       "category": 3,
@@ -56,7 +65,8 @@
       "category": 1,
       "rank": 3,
       "auth": false,
-      "version": 101
+      "version": 101,
+      "beta": true
     },
     {
       "name": "斋书苑",
